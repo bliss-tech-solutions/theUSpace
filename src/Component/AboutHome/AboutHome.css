@@ -1,0 +1,62 @@
+.AboutHomeContent,
+.CounterNumbersAndImageAboutContainer {
+    padding-left: 120px;
+}
+
+.CounterNumbersAndImageAboutContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.AboutHomeImageContainer {
+    overflow: hidden;
+    min-height: 500px;
+    max-height: 500px;
+}
+
+.AboutHomeImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.AboutGridDataContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.AboutGridItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-bottom: 1px solid #8080802e;
+    padding-bottom: 20px;
+}
+
+.AboutGridDataContainer .AboutGridItem:first-child {
+    border-bottom: none;
+}
+
+.AboutGridItem h4 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.AboutGridItem p {
+    font-size: 16px;
+    margin: 0;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .AboutHomeContent {
+        padding-left: 0px;
+    }
+}

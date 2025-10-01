@@ -1,0 +1,158 @@
+.BackgroundStickyAnimatedImageContainer {
+    height: 100%;
+    width: 100%;
+    min-height: 700px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.BackgroundStickyAnimatedImageContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    animation: fadeInOverlay 1.2s ease-in-out;
+}
+
+@keyframes fadeInOverlay {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.BackgroundStickyAnimatedImageContainerOverlayContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.BackgroundStickyAnimatedImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-heading {
+    animation: fadeInHeading 1s ease-in-out;
+}
+
+@keyframes fadeInHeading {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation Arrows */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.slider-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-arrow span {
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.slider-arrow-prev {
+    left: 30px;
+}
+
+.slider-arrow-next {
+    right: 30px;
+}
+
+/* Dot Indicators */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    gap: 15px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.slider-dot:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+}
+
+.slider-dot.active {
+    background-color: white;
+    transform: scale(1.3);
+}
+
+.ParaWidthSmall {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.BackgroundStickyAnimatedImageContainerOverlayContent button {
+    margin: 0 auto;
+}
+
