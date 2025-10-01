@@ -70,8 +70,6 @@
 }
 
 .TabDescriptionContainer {
-    /* min-height: 200px; */
-    /* background-color: red; */
     padding: 20px;
     display: flex;
     align-items: center;
@@ -100,8 +98,9 @@
         -webkit-backdrop-filter: blur(0px);
         background-color: white;
     }
+
     .TabDescriptionContainer p {
         color: black;
     }
-    
+
 }

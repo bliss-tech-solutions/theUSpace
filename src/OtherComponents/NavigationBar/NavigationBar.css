@@ -10,6 +10,9 @@
     position: relative;
     padding: 10px 10px;
     transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .NavigationBarContainer.shadow-active {
@@ -52,4 +55,101 @@
     top: 0;
     left: 0;
     transition: clip-path 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.NavigationBarLinks>div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.NavigationBarLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.NavigationBarLinks.scrolled a {
+    color: black;
+}
+
+.NavigationBarLinks a:hover {
+    opacity: 0.7;
+}
+.MobileMenuButton{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #NavigationBar {
+        padding: 0px !important;
+    }
+
+    .NavigationBarLinks>div {
+        display: none;
+    }
+
+    .MobileMenuButton {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: #fff;
+    }
+
+    .MobileMenuButton.scrolled {
+        background: rgba(0, 0, 0, 0.06);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        color: #000;
+    }
+
+    .ant-drawer .LogoContainer img {
+        width: 120px !important;
+    }
+
+    .DrawerHeader {
+        padding: 12px 12px;
+        border-bottom: 1px solid #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .DrawerLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .DrawerLinks a {
+        color: #111;
+        text-decoration: none;
+        padding: 12px 10px;
+        border-radius: 8px;
+        transition: background 0.2s ease;
+    }
+
+    .DrawerLinks a:hover {
+        background: #f5f5f5;
+    }
+
+    .DrawerClose {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        border: 1px solid #eaeaea;
+        background: #fff;
+        color: #111;
+    }
 }

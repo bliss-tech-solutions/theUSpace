@@ -53,6 +53,7 @@ const HomeHero = () => {
                             src={slide.image}
                             alt={slide.heading}
                             className={`hero-slide ${currentSlide === index ? 'active' : ''}`}
+                            loading={index === 0 ? "eager" : "lazy"}
                         />
                     ))}
 

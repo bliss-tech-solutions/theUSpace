@@ -1,0 +1,75 @@
+.FAQSContainer {
+    margin-left: 120px;
+    max-width: 1000px;
+}
+
+/* Custom Ant Design Collapse Styling */
+#FAQS .ant-collapse {
+    background-color: transparent;
+    border: none;
+}
+
+#FAQS .ant-collapse-item {
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#FAQS .ant-collapse-item:hover {
+    border-color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#FAQS .ant-collapse-header {
+    padding: 15px 30px !important;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+#FAQS .ant-collapse-item-active .ant-collapse-header {
+    background-color: #f8f8f8;
+}
+
+#FAQS .ant-collapse-content {
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+}
+
+#FAQS .ant-collapse-content-box {
+    padding: 20px 30px 25px;
+}
+
+.faq-question {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.faq-answer {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+}
+
+#FAQS .ant-collapse-expand-icon {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .FAQSContainer {
+        margin-left: 0px;
+    }
+
+    #FAQS .ant-collapse-header {
+        padding: 20px !important;
+    }
+
+    #FAQS .ant-collapse-content-box {
+        padding: 15px 20px;
+    }
+}

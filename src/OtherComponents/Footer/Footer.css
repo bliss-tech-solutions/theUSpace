@@ -1,0 +1,81 @@
+.FooterContent {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.FooterContent .FooterBlock:first-child {
+    display: flex;
+    /* align-items: center; */
+    gap: 40px;
+}
+
+.FooterBlock h4 {
+    margin: 0 0 12px 0;
+    color: #fff;
+}
+
+.FooterBlock p,
+.FooterBlock a,
+.FooterBottom p,
+.FooterBlock li {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.FooterBlock ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.FooterBlock li+li {
+    margin-top: 8px;
+}
+
+.FooterSubscribe .SubscribeRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.FooterSubscribe input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 0;
+    color: #fff;
+    width: 100%;
+}
+
+.FooterSubscribe button {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.FooterBottom {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px 0px;
+}
+
+#Footer {
+    background: #000;
+}
+
+@media (max-width: 1024px) {
+    .FooterContent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .FooterContent {
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -8,6 +8,10 @@ body {
     font-family: "Manrope", sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 .Container {
     max-width: 1300px;
     margin: 0 auto;
@@ -165,7 +169,10 @@ h5 {
 }
 
 .PaddingSectionTop100 {
-    padding-top: 100px;
+    padding-top: 80px;
+}
+.MarginTitleTop80 {
+    margin-top: 80px;
 }
 
 .PaddingSmallSectionsTop60 {
@@ -216,9 +223,27 @@ h5 {
     }
 }
 
+
 @media (max-width: 768px) {
     .Container {
         padding: 0px 10px !important;
     }
-    
+
+    h1 {
+        text-align: center;
+        font-size: 3.5rem;
+        margin: 0px;
+        font-family: "Manrope", sans-serif;
+        font-weight: 500;
+        /* line-height: 140px; */
+    }
+
+    h2 {
+        /* text-align: center; */
+        font-size: 2rem;
+        margin: 0px;
+        font-family: "Manrope", sans-serif;
+        font-weight: 500;
+    }
+
 }

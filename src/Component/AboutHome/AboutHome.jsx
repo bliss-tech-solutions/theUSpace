@@ -46,6 +46,16 @@ const AnimatedCounter = ({ value, suffix = "" }) => {
 const AboutHome = () => {
     const containerRef = useRef(null);
 
+    useEffect(() => {
+        // Initialize AOS
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        }
+    }, []);
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
@@ -79,10 +89,20 @@ const AboutHome = () => {
                     mainHeading=""
                 />
                 <div className="PaddingSmallSectionsTop60 AboutHomeContent">
-                    <h3>Interior design is more than arranging furniture — it's about creating experiences. Our approach blends modern elegance, cozy warmth, minimal charm, and artistic details. Every space is designed to feel functional yet inspiring, luxurious yet personal. From subtle textures to statement pieces, we craft interiors that reflect your lifestyle while adding timeless beauty to everyday living."
+                    <h3
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="200"
+                    >
+                        Interior design is more than arranging furniture — it's about creating experiences. Our approach blends modern elegance, cozy warmth, minimal charm, and artistic details. Every space is designed to feel functional yet inspiring, luxurious yet personal. From subtle textures to statement pieces, we craft interiors that reflect your lifestyle while adding timeless beauty to everyday living."
                     </h3>
                     <br />
-                    <button className="CommonButtonVariation2">
+                    <button
+                        className="CommonButtonVariation2"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="400"
+                    >
                         <span>Call Us</span>
                     </button>
                 </div>
@@ -122,7 +142,11 @@ const AboutHome = () => {
 
                             style={{ y }}
                         >
-                            <img src="https://images.unsplash.com/photo-1615971677499-5467cbab01c0?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                            <img 
+                                src="https://images.unsplash.com/photo-1615971677499-5467cbab01c0?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                alt="Interior Design" 
+                                loading="lazy"
+                            />
                         </motion.div>
                     </div>
                 </div>

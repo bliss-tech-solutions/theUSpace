@@ -6,16 +6,6 @@ import CategoriesData from "./CategoriesData";
 const OurProductsDesignsHome = () => {
     const [activeTab, setActiveTab] = useState(0);
 
-    useEffect(() => {
-        // Initialize AOS
-        if (typeof AOS !== 'undefined') {
-            AOS.init({
-                duration: 1000,
-                once: true
-            });
-        }
-    }, []);
-
     const handleTabHover = (index) => {
         setActiveTab(index);
     };
