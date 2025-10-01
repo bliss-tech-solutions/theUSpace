@@ -1,0 +1,55 @@
+#NavigationBar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    right: 0px;
+}
+
+.NavigationBarContainer {
+    position: relative;
+    padding: 10px 10px;
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.NavigationBarContainer.shadow-active {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.NavigationBarContainer::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: auto;
+    background-color: white;
+    height: var(--scroll-height, 0%);
+    width: 100%;
+    transition: height 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+    will-change: height;
+}
+
+.LogoContainer {
+    position: relative;
+    z-index: 1;
+    width: 100px;
+    height: auto;
+}
+
+#NavigationBar .LogoContainer img {
+    width: 100px;
+    display: block;
+}
+
+.logo-black {
+    position: relative;
+}
+
+.logo-white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: clip-path 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
