@@ -215,3 +215,10 @@ h5 {
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 }
+
+@media (max-width: 768px) {
+    .Container {
+        padding: 0px 10px !important;
+    }
+    
+}

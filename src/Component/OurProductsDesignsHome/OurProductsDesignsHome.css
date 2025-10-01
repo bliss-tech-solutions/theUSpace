@@ -81,3 +81,27 @@
 .TabDescriptionContainer p {
     color: white;
 }
+
+@media (max-width: 768px) {
+    .CategoriesNamesContainer {
+        flex-direction: column;
+    }
+
+    .CategoriesNamesContainer>div {
+        min-height: unset !important;
+    }
+
+    .BackgroundShowOverlayContainer {
+        min-height: unset !important;
+        background-image: none !important;
+    }
+
+    .CategoriesNamesContainer>div.active {
+        -webkit-backdrop-filter: blur(0px);
+        background-color: white;
+    }
+    .TabDescriptionContainer p {
+        color: black;
+    }
+    
+}
