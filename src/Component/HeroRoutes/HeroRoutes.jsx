@@ -6,6 +6,7 @@ import AboutHome from "../AboutHome/AboutHome";
 import TrustedPartners from "../../OtherComponents/TrustedPartners/TrustedPartners";
 import HomePageImageStackAnimation from "../HomePageImageStackAnimation/HomePageImageStackAnimation";
 import FAQS from "../../OtherComponents/FAQS/FAQS";
+import WorkingProcessSteps from "../../OtherComponents/WorkingProcessSteps/WorkingProcessSteps";
 const HeroRoutes = () => {
     return (
         <div>
@@ -14,6 +15,7 @@ const HeroRoutes = () => {
             <OurProductsDesignsHome />
             <TrustedPartners />
             <HomePageImageStackAnimation />
+            <WorkingProcessSteps />
             <FAQS />
         </div>
     );

@@ -1,0 +1,44 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://theuspace.com/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow access to important files
+Allow: /favicon.ico
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /site.webmanifest
+
+# Block access to development files
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.map$
+
+# Block access to temporary files
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /*.log$
+
+# Allow access to images and assets
+Allow: /Images/
+Allow: /images/
+Allow: /assets/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.ico$
+

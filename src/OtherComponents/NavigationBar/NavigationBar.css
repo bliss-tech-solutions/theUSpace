@@ -79,7 +79,8 @@
 .NavigationBarLinks a:hover {
     opacity: 0.7;
 }
-.MobileMenuButton{
+
+.MobileMenuButton {
     display: none;
 }
 
