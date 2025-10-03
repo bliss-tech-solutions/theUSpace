@@ -90,7 +90,7 @@ const NavigationBar = () => {
                 closeIcon={null}
                 onClose={() => setDrawerOpen(false)}
                 open={drawerOpen}
-                width={300}
+                width={350}
                 styles={{ body: { padding: 0 } }}
             >
                 <div className="DrawerHeader">

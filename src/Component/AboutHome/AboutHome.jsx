@@ -65,6 +65,11 @@ const AboutHome = () => {
 
     const AboutGridData = [
         {
+            CounterNumber: "5",
+            CounterSuffix: "k+",
+            CounterText: "Designs"
+        },
+        {
             CounterNumber: "60",
             CounterSuffix: "M+",
             CounterText: "Savings Money"
@@ -90,12 +95,21 @@ const AboutHome = () => {
                 />
                 <div className="PaddingSmallSectionsTop60 AboutHomeContent">
                     <h3
+                        className="desktop-only"
                         data-aos="fade-up"
                         data-aos-duration="1000"
                         data-aos-delay="200"
                     >
                         Interior design is more than arranging furniture — it's about creating experiences. Our approach blends modern elegance, cozy warmth, minimal charm, and artistic details. Every space is designed to feel functional yet inspiring, luxurious yet personal. From subtle textures to statement pieces, we craft interiors that reflect your lifestyle while adding timeless beauty to everyday living."
                     </h3>
+                    <p
+                        className="mobile-only"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="200"
+                    >
+                        Interior design is more than arranging furniture — it's about creating experiences. Our approach blends modern elegance, cozy warmth, minimal charm, and artistic details. Every space is designed to feel functional yet inspiring, luxurious yet personal. From subtle textures to statement pieces, we craft interiors that reflect your lifestyle while adding timeless beauty to everyday living."
+                    </p>
                     <br />
                     <button
                         className="CommonButtonVariation2"
@@ -108,11 +122,7 @@ const AboutHome = () => {
                 </div>
                 <div className="CounterNumbersAndImageAboutContainer PaddingSmallSectionsTop60">
                     <div className="AboutGridDataContainer">
-                        <div className="AboutGridItem BookAppointmentItem">
-                            {/* <button className="CommonButtonVariation2">
-                                <span>Book Appoinment</span>
-                            </button> */}
-                        </div>
+                       
                         {AboutGridData.map((item, index) => (
                             <motion.div
                                 key={index}
@@ -142,9 +152,9 @@ const AboutHome = () => {
 
                             style={{ y }}
                         >
-                            <img 
-                                src="https://images.unsplash.com/photo-1615971677499-5467cbab01c0?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                                alt="Interior Design" 
+                            <img
+                                src="https://images.unsplash.com/photo-1615971677499-5467cbab01c0?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Interior Design"
                                 loading="lazy"
                             />
                         </motion.div>

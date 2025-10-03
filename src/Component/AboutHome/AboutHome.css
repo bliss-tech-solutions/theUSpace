@@ -37,9 +37,9 @@
     padding-bottom: 20px;
 }
 
-.AboutGridDataContainer .AboutGridItem:first-child {
+/* .AboutGridDataContainer .AboutGridItem:first-child {
     border-bottom: none;
-}
+} */
 
 .AboutGridItem h4 {
     font-size: 60px;
@@ -53,6 +53,15 @@
     font-size: 16px;
     margin: 0;
     color: #666;
+}
+
+/* Desktop and Mobile Text Display */
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -70,4 +79,22 @@
     .CounterNumbersAndImageAboutContainer {
         padding-left: 0px;
     }
+
+    /* Show mobile text, hide desktop text */
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .AboutGridItem h4 {
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 10px;
+        color: #495744;
+    }
+
 }
