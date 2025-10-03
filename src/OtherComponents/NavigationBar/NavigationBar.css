@@ -63,6 +63,12 @@
     gap: 20px;
 }
 
+.SetContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 .NavigationBarLinks a {
     color: white;
     text-decoration: none;
@@ -113,6 +119,7 @@
 
     .ant-drawer .LogoContainer img {
         width: 120px !important;
+        margin-left: 10px;
     }
 
     .DrawerHeader {

@@ -45,11 +45,13 @@ const NavigationBar = () => {
     };
 
     return (
-        <div className="Container" id="NavigationBar">
+        <div  id="NavigationBar">
             <div
-                className={`NavigationBarContainer ${scrollHeight >= 100 ? 'shadow-active' : ''}`}
+                className={`NavigationBarContainer  ${scrollHeight >= 100 ? 'shadow-active' : ''}`}
                 style={{ '--scroll-height': `${scrollHeight}%` }}
+
             >
+                <div className="Container SetContainer">
                 <div className="LogoContainer">
                     <img
                         src="/Images/TheUSpaceBlackLogo.png"
@@ -79,6 +81,7 @@ const NavigationBar = () => {
                 <button className={`MobileMenuButton ${scrollHeight >= 50 ? 'scrolled' : ''}`} aria-label="Open Menu" onClick={() => setDrawerOpen(true)}>
                     <HiMenuAlt3 />
                 </button>
+                </div>
             </div>
 
             {/* Mobile Drawer */}
@@ -123,7 +126,7 @@ const NavigationBar = () => {
                     <div style={{ fontSize: '48px', marginBottom: '20px' }}>🚧</div>
                     <h3 style={{ marginBottom: '15px', color: '#333' }}>Coming Soon</h3>
                     <p style={{ color: '#666', lineHeight: '1.6' }}>
-                        This feature is currently under development. 
+                        This feature is currently under development.
                         We're working hard to bring you the best experience.
                     </p>
                     <p style={{ color: '#999', fontSize: '14px', marginTop: '15px' }}>
