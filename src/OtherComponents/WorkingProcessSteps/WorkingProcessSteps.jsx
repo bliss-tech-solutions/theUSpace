@@ -10,7 +10,7 @@ const WorkingProcessSteps = () => {
                     tagText="Working Process Steps"
                     mainHeading="Working Process Steps"
                 />
-                <div className="GridCardsContainer PaddingSmallSectionsTop60">
+                <div className="GridCardsContainer PaddingSmallSectionsTop60 PaddingSmallSectionsBottom60">
                     {WorkingStepsCardData.map((item, index) => (
                         <div
                             key={item.id}

@@ -186,6 +186,10 @@ p {
 .PaddingSmallSectionsTop60 {
     padding-top: 60px;
 }
+.PaddingSmallSectionsBottom60 {
+    padding-bottom: 60px;
+}
+
 
 .CommonTagText h5 {
     position: relative;

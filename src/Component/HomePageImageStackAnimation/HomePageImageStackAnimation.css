@@ -58,10 +58,15 @@
 .OverlayContentContainer {
     position: absolute;
     bottom: 150px;
-    background: white;
+    background: transparent;
     z-index: 5;
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    color: white !important;
+}
+
+.OverlayContentContainer p {
+    color: white !important;
 }

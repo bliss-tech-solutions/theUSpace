@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
                     tagText="Why Choose Us"
                     mainHeading="Why Choose Us"
                 />
-                <div className="WhyChooseGridContainer PaddingSmallSectionsTop60">
+                <div className="WhyChooseGridContainer PaddingSmallSectionsTop60 PaddingSmallSectionsBottom60">
                     <div className="WhyChooseGridItemImageContainer">
                         <ViewportRevealImage
                             src="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
