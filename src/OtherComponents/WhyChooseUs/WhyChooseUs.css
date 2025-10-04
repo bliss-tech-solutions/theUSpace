@@ -1,0 +1,56 @@
+.WhyChooseGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+}
+
+.WhyChooseGridItemImageContainer div img {
+    width: 100%;
+}
+
+.WhyChooseGridItemDataContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+}
+
+.WhyChooseGridItemDataContainer div {
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    transition: .5s;
+}
+
+.WhyChooseGridItemDataContainer div::before {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.318);
+    /* border-radius: 50%; */
+    /* top: 0; */
+    left: 0;
+    bottom: -1px;
+    transition: .5s;
+}
+
+.WhyChooseGridItemDataContainer div:hover::before {
+    width: 100%;
+    height: 1px;
+    transition: .5s;
+}
+
+.WhyChooseGridItemDataContainer div:hover {
+    padding: 5px 0px;
+}
+
+@media (max-width: 768px) {
+    .WhyChooseGridContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .WhyChooseGridItemDataContainer {
+        grid-template-columns: 1fr;
+        /* gap: 10px; */
+    }
+}

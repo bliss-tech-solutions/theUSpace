@@ -63,6 +63,11 @@ h5 {
     font-weight: 400;
 }
 
+p {
+    /* margin: 0px ; */
+    color: #718096;
+}
+
 .whiteColor {
     color: #fff;
 }
@@ -249,4 +254,7 @@ h5 {
         font-weight: 500;
     }
 
+    .PaddingSectionTop100 {
+        padding-top: 40px;
+    }
 }

@@ -110,6 +110,10 @@ const NavigationBar = () => {
                             {item.name}
                         </Link>
                     ))}
+
+                </div>
+                <div className="DrawerContactUsButton">
+                    <button className="CommonButtonVariation2"><span>Contact Us</span></button>
                 </div>
             </Drawer>
 

@@ -7,6 +7,7 @@ import TrustedPartners from "../../OtherComponents/TrustedPartners/TrustedPartne
 import HomePageImageStackAnimation from "../HomePageImageStackAnimation/HomePageImageStackAnimation";
 import FAQS from "../../OtherComponents/FAQS/FAQS";
 import WorkingProcessSteps from "../../OtherComponents/WorkingProcessSteps/WorkingProcessSteps";
+import WhyChooseUs from "../../OtherComponents/WhyChooseUs/WhyChooseUs";
 const HeroRoutes = () => {
     return (
         <div>
@@ -17,6 +18,7 @@ const HeroRoutes = () => {
             <HomePageImageStackAnimation />
             <WorkingProcessSteps />
             <FAQS />
+            <WhyChooseUs />
         </div>
     );
 };

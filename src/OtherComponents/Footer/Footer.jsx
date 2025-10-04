@@ -18,18 +18,22 @@ const Footer = () => {
                         <div className="FooterLogoContainer">
                             <img src="/Images/TheUSpaceWhiteLogo.png" alt="" />
                         </div>
+
+                    </div>
+                    <div className="FooterBlock">
+                        {/* <div> */}
                         <div>
-                            <div>
-                                <h4>ADDRESS</h4>
-                                <p>2972 Westheimer Rd. Santa Ana,</p>
-                                <p>Illinois 85486</p>
-                            </div>
-                            <div>
-                                <h4>CONTACT US</h4>
-                                <p>+(378) 555-0108</p>
-                                <p>info@example.io</p>
-                            </div>
+                            <h4>ADDRESS</h4>
+                            <p>2972 Westheimer Rd. Santa Ana,</p>
+                            <p>Illinois 85486</p>
                         </div>
+                        <br />
+                        <div>
+                            <h4>CONTACT US</h4>
+                            <p>+(378) 555-0108</p>
+                            <p>info@example.io</p>
+                        </div>
+                        {/* </div> */}
                     </div>
                     {/* <div className="FooterBlock">
 
@@ -44,7 +48,7 @@ const Footer = () => {
                             <li><a href="#Contact" onClick={handleLinkClick}>Contact us</a></li>
                         </ul>
                     </div>
-                    <div className="FooterBlock">
+                    {/* <div className="FooterBlock">
                         <h4>RESOURCES</h4>
                         <ul>
                             <li><a href="#" onClick={handleLinkClick}>Style Guide</a></li>
@@ -53,7 +57,7 @@ const Footer = () => {
                             <li><a href="#" onClick={handleLinkClick}>Cookie Policy</a></li>
                             <li><a href="#" onClick={handleLinkClick}>Terms & Conditions</a></li>
                         </ul>
-                    </div>
+                    </div> */}
                     <div className="FooterBlock">
                         <h4>FOLLOW</h4>
                         <ul>
