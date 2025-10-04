@@ -4,6 +4,7 @@ import "./App.css";
 import NavigationBar from "./OtherComponents/NavigationBar/NavigationBar";
 import Footer from "./OtherComponents/Footer/Footer";
 import Loader from "./OtherComponents/Loader/Loader";
+import BackToTopButton from "./OtherComponents/BackToTopButton/BackToTopButton";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +28,7 @@ const App = () => {
       <NavigationBar />
       <HeroRoutes />
       <Footer />
+      <BackToTopButton />
     </div>
   );
 };

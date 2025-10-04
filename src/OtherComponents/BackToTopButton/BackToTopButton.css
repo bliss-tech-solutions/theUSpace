@@ -1,0 +1,151 @@
+.BackToTopButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.8);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.BackToTopButton.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.BackToTopButton:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    background: white;
+    color: black;
+    border-color: black;
+}
+
+.BackToTopButton:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.BackToTopButton svg {
+    transition: transform 0.3s ease;
+}
+
+.BackToTopButton:hover svg {
+    transform: translateY(-2px);
+}
+
+/* Pulse animation for attention */
+.BackToTopButton::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: white;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .BackToTopButton {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .BackToTopButton {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .BackToTopButton svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .BackToTopButton {
+        background: white;
+        /* border-color: black; */
+        color: black;
+        /* box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3); */
+    }
+
+    .BackToTopButton:hover {
+        background: white;
+        color: black;
+        /* border-color: white; */
+        /* box-shadow: 0 8px 30px rgba(255, 255, 255, 0.5); */
+    }
+
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .BackToTopButton {
+        background: #000;
+        border: 1px solid #fff;
+    }
+
+    .BackToTopButton:hover {
+        background: #333;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .BackToTopButton {
+        transition: opacity 0.3s ease;
+    }
+
+    .BackToTopButton:hover {
+        transform: none;
+    }
+
+    .BackToTopButton::before {
+        animation: none;
+    }
+}
