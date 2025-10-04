@@ -8,8 +8,6 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     position: relative;
-    /* min-height: 200vh; */
-    /* padding: 100px 0; */
     align-items: start;
 }
 
@@ -30,7 +28,7 @@
     flex-direction: column;
     align-self: start;
     transition: .5s;
-    background-color: white;
+    background-color: #f6f6f6;
 }
 
 .GridCardItem:hover {
