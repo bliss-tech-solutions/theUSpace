@@ -1,0 +1,73 @@
+.ViewportRevealImageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ViewportRevealImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ViewportRevealImageWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 5;
+    height: 100%;
+    transition: height 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top;
+}
+
+.ViewportRevealImageWrapper.revealed::before {
+    height: 0%;
+}
+
+.ViewportRevealImageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Customizable animation duration and easing */
+.ViewportRevealImageWrapper.slow::before {
+    transition: height 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ViewportRevealImageWrapper.fast::before {
+    transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Different reveal directions */
+.ViewportRevealImageWrapper.reveal-bottom::before {
+    transform-origin: bottom;
+}
+
+.ViewportRevealImageWrapper.reveal-left::before {
+    width: 100%;
+    height: 100%;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: left;
+}
+
+.ViewportRevealImageWrapper.reveal-left.revealed::before {
+    width: 0%;
+}
+
+.ViewportRevealImageWrapper.reveal-right::before {
+    width: 100%;
+    height: 100%;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: right;
+}
+
+.ViewportRevealImageWrapper.reveal-right.revealed::before {
+    width: 0%;
+}

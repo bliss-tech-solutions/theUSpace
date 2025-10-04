@@ -3,6 +3,7 @@ import "./AboutHome.css";
 import SectionHeader from "../../OtherComponents/SectionHeader/SectionHeader";
 import { motion, useScroll, useTransform, useInView, useMotionValue, useSpring, animate } from "framer-motion";
 import { Link } from "react-router-dom";
+import ViewportRevealImage from "../../OtherComponents/ViewportRevealImage/ViewportRevealImage";
 // Counter Component
 const AnimatedCounter = ({ value, suffix = "" }) => {
     const ref = useRef(null);
@@ -100,7 +101,7 @@ const AboutHome = () => {
                         data-aos-duration="1000"
                         data-aos-delay="200"
                     >
-                       At The U Space, we specialize in crafting personalized interior design solutions that blend aesthetics with functionality. Our team of creative professionals works closely with clients to understand their vision and transform it into spaces that inspire and elevate everyday living. Whether residential, commercial, or hospitality, each project reflects a unique story told through thoughtful design, detail, and innovation.
+                        At The U Space, we specialize in crafting personalized interior design solutions that blend aesthetics with functionality. Our team of creative professionals works closely with clients to understand their vision and transform it into spaces that inspire and elevate everyday living. Whether residential, commercial, or hospitality, each project reflects a unique story told through thoughtful design, detail, and innovation.
                     </h3>
                     <p
                         className="mobile-only"
@@ -112,11 +113,11 @@ const AboutHome = () => {
                     </p>
                     <br />
                     <Link to="tel:8511722020">
-                    <button
-                        className="CommonButtonVariation2"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="400"
+                        <button
+                            className="CommonButtonVariation2"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="400"
                         >
                             <span>Call Us</span>
                         </button>
@@ -124,7 +125,7 @@ const AboutHome = () => {
                 </div>
                 <div className="CounterNumbersAndImageAboutContainer PaddingSmallSectionsTop60">
                     <div className="AboutGridDataContainer">
-                       
+
                         {AboutGridData.map((item, index) => (
                             <motion.div
                                 key={index}
@@ -153,11 +154,12 @@ const AboutHome = () => {
                         <motion.div
 
                             style={{ y }}
+
                         >
-                            <img
+                            <ViewportRevealImage
                                 src="https://images.unsplash.com/photo-1615971677499-5467cbab01c0?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 alt="Interior Design"
-                                loading="lazy"
+                                revealId="about-home-image"
                             />
                         </motion.div>
                     </div>

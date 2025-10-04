@@ -17,8 +17,8 @@ const HeroRoutes = () => {
             <TrustedPartners />
             <HomePageImageStackAnimation />
             <WorkingProcessSteps />
-            <FAQS />
             <WhyChooseUs />
+            <FAQS />
         </div>
     );
 };
