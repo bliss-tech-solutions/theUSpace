@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import "./AboutHome.css";
 import SectionHeader from "../../OtherComponents/SectionHeader/SectionHeader";
 import { motion, useScroll, useTransform, useInView, useMotionValue, useSpring, animate } from "framer-motion";
-
+import { Link } from "react-router-dom";
 // Counter Component
 const AnimatedCounter = ({ value, suffix = "" }) => {
     const ref = useRef(null);
@@ -100,7 +100,7 @@ const AboutHome = () => {
                         data-aos-duration="1000"
                         data-aos-delay="200"
                     >
-                        Interior design is more than arranging furniture — it's about creating experiences. Our approach blends modern elegance, cozy warmth, minimal charm, and artistic details. Every space is designed to feel functional yet inspiring, luxurious yet personal. From subtle textures to statement pieces, we craft interiors that reflect your lifestyle while adding timeless beauty to everyday living."
+                       At The U Space, we specialize in crafting personalized interior design solutions that blend aesthetics with functionality. Our team of creative professionals works closely with clients to understand their vision and transform it into spaces that inspire and elevate everyday living. Whether residential, commercial, or hospitality, each project reflects a unique story told through thoughtful design, detail, and innovation.
                     </h3>
                     <p
                         className="mobile-only"
@@ -108,17 +108,19 @@ const AboutHome = () => {
                         data-aos-duration="1000"
                         data-aos-delay="200"
                     >
-                        Interior design is more than arranging furniture — it's about creating experiences. Our approach blends modern elegance, cozy warmth, minimal charm, and artistic details. Every space is designed to feel functional yet inspiring, luxurious yet personal. From subtle textures to statement pieces, we craft interiors that reflect your lifestyle while adding timeless beauty to everyday living."
+                        At The U Space, we specialize in crafting personalized interior design solutions that blend aesthetics with functionality. Our team of creative professionals works closely with clients to understand their vision and transform it into spaces that inspire and elevate everyday living. Whether residential, commercial, or hospitality, each project reflects a unique story told through thoughtful design, detail, and innovation.
                     </p>
                     <br />
+                    <Link to="tel:8511722020">
                     <button
                         className="CommonButtonVariation2"
                         data-aos="fade-up"
                         data-aos-duration="1000"
                         data-aos-delay="400"
-                    >
-                        <span>Call Us</span>
-                    </button>
+                        >
+                            <span>Call Us</span>
+                        </button>
+                    </Link>
                 </div>
                 <div className="CounterNumbersAndImageAboutContainer PaddingSmallSectionsTop60">
                     <div className="AboutGridDataContainer">

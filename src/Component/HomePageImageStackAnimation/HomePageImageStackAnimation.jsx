@@ -3,7 +3,7 @@ import "./HomePageImageStackAnimation.css";
 import ImagesStackAnimationData from "./ImagesStackAnimationData";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const StackImage = ({ src, index, total }) => {
+const StackImage = ({ data, index, total }) => {
     const wrapperRef = useRef(null);
     const containerRef = useRef(null);
 
@@ -23,10 +23,14 @@ const StackImage = ({ src, index, total }) => {
         <div ref={wrapperRef} className="stack-image-wrapper">
             <div ref={containerRef} className="stack-image-container">
                 <img
-                    src={src}
-                    alt={`Interior Design ${index + 1}`}
+                    src={data.image}
+                    alt={data.title}
                     loading={index === 0 ? "eager" : "lazy"}
                 />
+                <div className="OverlayContentContainer">
+                    <h3>{data.title}</h3>
+                    <p>{data.description}</p>
+                </div>
                 <motion.div
                     className="stack-image-overlay"
                     style={{ opacity: overlayOpacity }}
@@ -40,10 +44,10 @@ const HomePageImageStackAnimation = () => {
     return (
         <div className="PaddingSectionTop100" id="HomePageImageStackAnimation">
             <div className="StackImageContainer">
-                {ImagesStackAnimationData.map((image, index) => (
+                {ImagesStackAnimationData.map((data, index) => (
                     <StackImage
-                        key={index}
-                        src={image}
+                        key={data.id}
+                        data={data}
                         index={index}
                         total={ImagesStackAnimationData.length}
                     />

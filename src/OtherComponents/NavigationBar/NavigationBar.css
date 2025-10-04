@@ -63,12 +63,13 @@
     gap: 20px;
 }
 
-.SetContainer{
+.SetContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
+
 .NavigationBarLinks a {
     color: white;
     text-decoration: none;

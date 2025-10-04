@@ -45,42 +45,42 @@ const NavigationBar = () => {
     };
 
     return (
-        <div  id="NavigationBar">
+        <div id="NavigationBar">
             <div
                 className={`NavigationBarContainer  ${scrollHeight >= 100 ? 'shadow-active' : ''}`}
                 style={{ '--scroll-height': `${scrollHeight}%` }}
 
             >
                 <div className="Container SetContainer">
-                <div className="LogoContainer">
-                    <img
-                        src="/Images/TheUSpaceBlackLogo.png"
-                        alt="The USpace Logo"
-                        className="logo-black"
-                        loading="eager"
-                    />
-                    <img
-                        src="/Images/TheUSpaceWhiteLogo.png"
-                        alt="The USpace Logo"
-                        className="logo-white"
-                        style={{ clipPath: `inset(${scrollHeight}% 0 0 0)` }}
-                        loading="eager"
-                    />
-                </div>
-                <div className={`NavigationBarLinks ${scrollHeight >= 50 ? 'scrolled' : ''}`}>
-                    <div>
-                        {NavigationLinksData.map((item) => (
-                            <div key={item.id}>
-                                <Link to={item.link} onClick={handleLinkClick}>{item.name}</Link>
-                            </div>
-                        ))}
+                    <div className="LogoContainer">
+                        <img
+                            src="/Images/TheUSpaceBlackLogo.png"
+                            alt="The USpace Logo"
+                            className="logo-black"
+                            loading="eager"
+                        />
+                        <img
+                            src="/Images/TheUSpaceWhiteLogo.png"
+                            alt="The USpace Logo"
+                            className="logo-white"
+                            style={{ clipPath: `inset(${scrollHeight}% 0 0 0)` }}
+                            loading="eager"
+                        />
                     </div>
-                </div>
+                    <div className={`NavigationBarLinks ${scrollHeight >= 50 ? 'scrolled' : ''}`}>
+                        <div>
+                            {NavigationLinksData.map((item) => (
+                                <div key={item.id}>
+                                    <Link to={item.link} onClick={handleLinkClick}>{item.name}</Link>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
 
-                {/* Mobile Menu Button */}
-                <button className={`MobileMenuButton ${scrollHeight >= 50 ? 'scrolled' : ''}`} aria-label="Open Menu" onClick={() => setDrawerOpen(true)}>
-                    <HiMenuAlt3 />
-                </button>
+                    {/* Mobile Menu Button */}
+                    <button className={`MobileMenuButton ${scrollHeight >= 50 ? 'scrolled' : ''}`} aria-label="Open Menu" onClick={() => setDrawerOpen(true)}>
+                        <HiMenuAlt3 />
+                    </button>
                 </div>
             </div>
 

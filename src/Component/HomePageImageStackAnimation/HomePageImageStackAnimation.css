@@ -54,3 +54,14 @@
     pointer-events: none;
     z-index: 2;
 }
+
+.OverlayContentContainer {
+    position: absolute;
+    bottom: 150px;
+    background: white;
+    z-index: 5;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
