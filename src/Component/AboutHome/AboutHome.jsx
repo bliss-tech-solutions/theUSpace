@@ -9,10 +9,10 @@ const AnimatedCounter = ({ value, suffix = "" }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
     const numericValue = parseFloat(value);
-    
+
     // Create array of digits for sliding animation
     const digits = numericValue.toString().split('');
-    
+
     return (
         <motion.h4
             ref={ref}
@@ -24,7 +24,7 @@ const AnimatedCounter = ({ value, suffix = "" }) => {
             {digits.map((digit, index) => {
                 const targetDigit = parseInt(digit);
                 const digitHeight = 1; // Height of one digit in em
-                
+
                 return (
                     <motion.div
                         key={index}
@@ -36,8 +36,8 @@ const AnimatedCounter = ({ value, suffix = "" }) => {
                         }}
                         initial={{ opacity: 0 }}
                         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                        transition={{ 
-                            duration: 0.3, 
+                        transition={{
+                            duration: 0.3,
                             delay: 0.5 + (index * 0.2)
                         }}
                     >
@@ -49,8 +49,8 @@ const AnimatedCounter = ({ value, suffix = "" }) => {
                             }}
                             initial={{ y: 0 }}
                             animate={isInView ? { y: `-${targetDigit * digitHeight}em` } : { y: 0 }}
-                            transition={{ 
-                                duration: 1.5, 
+                            transition={{
+                                duration: 1.5,
                                 ease: "easeOut",
                                 delay: 0.8 + (index * 0.2)
                             }}
@@ -77,8 +77,8 @@ const AnimatedCounter = ({ value, suffix = "" }) => {
                 <motion.span
                     initial={{ scale: 0.5, opacity: 0 }}
                     animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }}
-                    transition={{ 
-                        duration: 0.8, 
+                    transition={{
+                        duration: 0.8,
                         ease: "easeOut",
                         delay: 2.0
                     }}
@@ -93,15 +93,6 @@ const AnimatedCounter = ({ value, suffix = "" }) => {
 const AboutHome = () => {
     const containerRef = useRef(null);
 
-    useEffect(() => {
-        // Initialize AOS
-        if (typeof AOS !== 'undefined') {
-            AOS.init({
-                duration: 1000,
-                once: true
-            });
-        }
-    }, []);
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
